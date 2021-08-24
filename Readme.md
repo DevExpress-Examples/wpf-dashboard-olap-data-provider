@@ -4,7 +4,7 @@
 * [MainWindow.xaml.cs](./CS/WpfDashboard_OlapDataProvider/MainWindow.xaml.cs) (VB: [MainWindow.xaml.vb](./VB/WpfDashboard_OlapDataProvider/MainWindow.xaml.vb))
 <!-- default file list end -->
 
-# WPF Dashboard Viewer - How to bind a dashboard to an OLAP cube
+# Dashboard for WPF - How to bind a dashboard to an OLAP cube
 
 This example demonstrates how to bind a dashboard to an OLAP cube using [DashboardOlapDataSource](
 https://docs.devexpress.com/Dashboard/DevExpress.DashboardCommon.DashboardOlapDataSource) in WPF Dashboard 
