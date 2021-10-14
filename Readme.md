@@ -4,7 +4,7 @@
 [![](https://img.shields.io/badge/📖_How_to_use_DevExpress_Examples-e9f6fc?style=flat-square)](https://docs.devexpress.com/GeneralInformation/403183)
 <!-- default badges end -->
 
-# Dashboard for WPF - How to bind a dashboard to an OLAP cube
+# Dashboard for WPF - How to Bind a Dashboard to an OLAP Cube
 
 This example demonstrates how to bind a dashboard to an OLAP cube using [DashboardOlapDataSource](
 https://docs.devexpress.com/Dashboard/DevExpress.DashboardCommon.DashboardOlapDataSource) in WPF Dashboard 
