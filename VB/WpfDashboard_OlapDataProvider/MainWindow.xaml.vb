@@ -11,11 +11,11 @@ Namespace WpfDashboard_OlapDataProvider
         Inherits Window
 
         Public Sub New()
-            InitializeComponent()
+            Me.InitializeComponent()
         End Sub
 
         Private Sub Window_Loaded(ByVal sender As Object, ByVal e As RoutedEventArgs)
-            dashboardControl1.Dashboard = CreateDashboard()
+            Me.dashboardControl1.Dashboard = CreateDashboard()
         End Sub
 
         Private Function CreateDashboard() As Dashboard
@@ -33,43 +33,19 @@ Namespace WpfDashboard_OlapDataProvider
             cardItem.SparklineArgument = New Dimension("[Date].[Month of Year].[Month of Year]", DateTimeGroupInterval.MonthYear)
             Dim card As Card = New Card()
             card.LayoutTemplate = New CardStretchedLayoutTemplate()
-             ''' Cannot convert AssignmentExpressionSyntax, System.InvalidCastException: Unable to cast object of type 'Microsoft.CodeAnalysis.VisualBasic.Syntax.EmptyStatementSyntax' to type 'Microsoft.CodeAnalysis.VisualBasic.Syntax.ExpressionSyntax'.
-'''    at ICSharpCode.CodeConverter.VB.NodesVisitor.VisitAssignmentExpression(AssignmentExpressionSyntax node)
-'''    at Microsoft.CodeAnalysis.CSharp.CSharpSyntaxVisitor`1.Visit(SyntaxNode node)
-'''    at ICSharpCode.CodeConverter.VB.CommentConvertingVisitorWrapper`1.Accept(SyntaxNode csNode, Boolean addSourceMapping)
-''' 
-''' Input:
-'''             card.ActualValue = new Measure("[Measures].[Internet Sales Amount]")
-'''   ''' Cannot convert AssignmentExpressionSyntax, System.InvalidCastException: Unable to cast object of type 'Microsoft.CodeAnalysis.VisualBasic.Syntax.EmptyStatementSyntax' to type 'Microsoft.CodeAnalysis.VisualBasic.Syntax.ExpressionSyntax'.
-'''    at ICSharpCode.CodeConverter.VB.NodesVisitor.VisitAssignmentExpression(AssignmentExpressionSyntax node)
-'''    at Microsoft.CodeAnalysis.CSharp.CSharpSyntaxVisitor`1.Visit(SyntaxNode node)
-'''    at ICSharpCode.CodeConverter.VB.CommentConvertingVisitorWrapper`1.Accept(SyntaxNode csNode, Boolean addSourceMapping)
-''' 
-''' Input:
-'''             card.TargetValue = new Measure("[Measures].[Sales Amount]")
-'''  cardItem.Cards.Add(card)
+            card.ActualValue = New Measure("[Measures].[Internet Sales Amount]")
+            card.TargetValue = New Measure("[Measures].[Sales Amount]")
+            cardItem.Cards.Add(card)
             Dim chartItem As ChartDashboardItem = New ChartDashboardItem()
             chartItem.DataSource = olapDataSource
             chartItem.Arguments.Add(New Dimension("[Sales Territory].[Sales Territory].[Country]"))
             chartItem.Panes.Add(New ChartPane())
             Dim salesAmountSeries As SimpleSeries = New SimpleSeries(SimpleSeriesType.Bar)
-             ''' Cannot convert AssignmentExpressionSyntax, System.InvalidCastException: Unable to cast object of type 'Microsoft.CodeAnalysis.VisualBasic.Syntax.EmptyStatementSyntax' to type 'Microsoft.CodeAnalysis.VisualBasic.Syntax.ExpressionSyntax'.
-'''    at ICSharpCode.CodeConverter.VB.NodesVisitor.VisitAssignmentExpression(AssignmentExpressionSyntax node)
-'''    at Microsoft.CodeAnalysis.CSharp.CSharpSyntaxVisitor`1.Visit(SyntaxNode node)
-'''    at ICSharpCode.CodeConverter.VB.CommentConvertingVisitorWrapper`1.Accept(SyntaxNode csNode, Boolean addSourceMapping)
-''' 
-''' Input:
-'''             salesAmountSeries.Value = new Measure("[Measures].[Sales Amount]")
-'''  chartItem.Panes(0).Series.Add(salesAmountSeries)
+            salesAmountSeries.Value = New Measure("[Measures].[Sales Amount]")
+            chartItem.Panes(0).Series.Add(salesAmountSeries)
             Dim salesInernetAmountSeries As SimpleSeries = New SimpleSeries(SimpleSeriesType.Bar)
-             ''' Cannot convert AssignmentExpressionSyntax, System.InvalidCastException: Unable to cast object of type 'Microsoft.CodeAnalysis.VisualBasic.Syntax.EmptyStatementSyntax' to type 'Microsoft.CodeAnalysis.VisualBasic.Syntax.ExpressionSyntax'.
-'''    at ICSharpCode.CodeConverter.VB.NodesVisitor.VisitAssignmentExpression(AssignmentExpressionSyntax node)
-'''    at Microsoft.CodeAnalysis.CSharp.CSharpSyntaxVisitor`1.Visit(SyntaxNode node)
-'''    at ICSharpCode.CodeConverter.VB.CommentConvertingVisitorWrapper`1.Accept(SyntaxNode csNode, Boolean addSourceMapping)
-''' 
-''' Input:
-'''             salesInernetAmountSeries.Value = new Measure("[Measures].[Internet Sales Amount]")
-'''  chartItem.Panes(0).Series.Add(salesInernetAmountSeries)
+            salesInernetAmountSeries.Value = New Measure("[Measures].[Internet Sales Amount]")
+            chartItem.Panes(0).Series.Add(salesInernetAmountSeries)
             dBoard.Items.AddRange(cardItem, chartItem)
             Dim cardLayoutItem As DashboardLayoutItem = New DashboardLayoutItem(cardItem)
             Dim chartLayoutItem As DashboardLayoutItem = New DashboardLayoutItem(chartItem)
