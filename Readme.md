@@ -12,7 +12,7 @@ application.
 
 The `DashboardOlapDataSource` allows you to establish a connection to the OLAP cube by specifying a connection string.
 
-![](https://github.com/DevExpress-Examples/wpf-dashboard-olap-data-provider/blob/18.1.3%2B/images/wpfdashboard-olapdataprovider.png)
+![](./images/wpfdashboard-olapdataprovider.png)
 
 <!-- default file list -->
 ## Files to Look At
