@@ -25,7 +25,7 @@ namespace WpfDashboard_OlapDataProvider
 
             OlapConnectionParameters olapParams = new OlapConnectionParameters();
             olapParams.ConnectionString = @"provider=MSOLAP;
-                                  data source=http://demos.devexpress.com/Services/OLAP/msmdpump.dll;
+                                  data source=https://demos.devexpress.com/Services/OLAP/msmdpump.dll;
                                   initial catalog=Adventure Works DW Standard Edition;
                                   cube name=Adventure Works;";
 

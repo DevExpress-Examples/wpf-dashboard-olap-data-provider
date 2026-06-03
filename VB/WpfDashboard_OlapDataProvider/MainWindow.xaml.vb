@@ -22,7 +22,7 @@ Namespace WpfDashboard_OlapDataProvider
             Dim dBoard As Dashboard = New Dashboard()
             Dim olapParams As OlapConnectionParameters = New OlapConnectionParameters()
             olapParams.ConnectionString = "provider=MSOLAP;
-                                  data source=http://demos.devexpress.com/Services/OLAP/msmdpump.dll;
+                                  data source=https://demos.devexpress.com/Services/OLAP/msmdpump.dll;
                                   initial catalog=Adventure Works DW Standard Edition;
                                   cube name=Adventure Works;"
             Dim olapDataSource As DashboardOlapDataSource = New DashboardOlapDataSource(olapParams)
